@@ -1,0 +1,386 @@
+:root{
+    --biru : #0000CD;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,800&display=swap');
+body{
+    font-family: "Poppins", sans-serif;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+nav{
+    background: var(--biru);
+    padding: 1em;
+}
+
+nav .container {
+    display: flex;
+    justify-content: end;
+    
+}
+.container ul{
+    display: flex;
+
+}
+.container ul li, a{
+    color: white;
+    list-style: none;   
+    padding-left: 20px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.menu-toggle{
+    display: none;
+    position: relative
+}
+.menu-toggle img{
+    width: 25px;
+}
+.menu-toggle input{
+    position: absolute;
+    display: flex;
+    margin-right: 1em;
+    width: 20px;
+    top: -.1px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+a{
+
+    text-decoration: none;
+}
+
+/* sini mulai banner/header */
+header{
+    width: 100%;
+    background: url('../foto/bag.png');
+    background-size: cover;
+    background-position: center;
+}
+header .container{
+    min-height: 500px;
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+header .banner-conten img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid rgb(248, 248, 248);
+    box-shadow: 5px 5px 10px black;
+    transition: .3s;
+}
+header .banner-conten img:hover{
+    transform: scale(1.1);
+}
+header .banner-conten h1, h3{
+    /*          x   y   blur  warna     */
+    text-shadow: 10px 10px 10px black ;
+    transform: translateY(50%);
+    line-height: 1.5em;
+}
+header .banner-conten h3{
+    font-weight: 500;
+}
+
+
+/* disini mulai section about */
+
+#about{
+    margin: 90px 0;
+}
+
+section .container{
+    width: 85%;
+    margin: 0 auto;
+    overflow: hidden    ;
+}
+section h1{
+    text-align: center;
+    font-size: 3em;
+    clear: both;
+}
+section hr{
+    width: 400px;
+    margin: 0 auto;
+    border: 3px solid var(--biru);
+    background: var(--biru);
+    clear: both;
+}
+.about-text-container{
+    display: flex;
+    align-items: center;
+}
+.kiri .kanan{
+    flex: 1;
+}
+
+.kiri img{
+    width: 300px;
+}
+.kanan p{
+    text-indent: 30px;
+    text-align: justify;
+    margin: 1.5em 0;
+}
+
+
+/* di sini Portopolio */
+#portopolio{
+    background: #eee;
+}
+#portopolio .container-project{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#portopolio .project{
+    width: 50%;
+    margin: 3em 1em;
+    background: white;
+    border-radius: 1em;
+    padding: 1.5em;
+    box-shadow: 3px 4px 10px rgba(0,0,0,.15);
+    transform: .3s;
+}
+#portopolio .project:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+#portopolio .project .gambar{
+    width: 100%;
+    height: 300px;
+    background: url('../foto/profile.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 1em;
+    margin-bottom: 1.2em;
+}
+#portopolio .project a{
+    margin: 1em 0;
+    line-height: 1em;
+    padding: .5em;
+    color: white;
+    background: var(--biru);
+    border-radius: .3em ;
+    display: block;
+    width: 100px;
+    text-align: center;
+
+}
+
+
+/* disini mullai galeri */
+#galery{
+    margin: 3em 0;
+}
+#galery .images{
+    display: flex;
+    margin: 2em 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#galery .images img{
+    width: 250px;
+    transition: .5s;
+}
+#galery .images img:hover{
+    transform: scale(1.8);
+    cursor: pointer;
+}
+
+
+/* ini untuk footer */
+footer{
+    background: var(--biru);
+    padding: 3em;
+    text-align: center;
+    color: white;
+}
+
+/* disini mulai section contact */
+#contact{
+    background: #eee;
+    width: 100%;
+}
+.box{
+    display: flex;
+    position: relative;
+}
+
+.box ul li{
+    list-style: none;
+    margin-bottom: 1.1em;
+    margin-top: 1em;
+}
+.box ul li a{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.box-kiri{
+    width: 48%;
+    background: white;
+    padding: 1.5em;
+}
+.box-kiri h4{
+    text-align: center;
+    border-bottom: 2px solid;
+}
+.box-kanan{
+    width: 48%;
+    padding: 3em;
+    font-size: 1.2em;
+    box-shadow: 2px 4px 10px black;
+    border-radius: 4px;
+}
+.box-kanan form input, textarea{
+    width: 100%;
+    padding: .5em;
+    margin-bottom: 1em;
+    border-radius: 2px;
+
+}
+.box-kanan form input{
+    border-radius: 2px;
+}
+.box-kanan form #kirim{
+    border: none;
+    color: white;
+    width: 4em;
+    background: var(--biru);
+    border-radius: .3em ;
+    display: block;
+    width: 100px;
+    text-align: center;
+    font-size: 1.5em;
+    transition: .3s;
+}
+#nama, #email, #pesan{
+    font-size: 1em;
+}
+.box-kanan form #kirim:hover{
+    cursor: pointer;
+    background: rgb(166, 166, 235);
+}
+
+.ke-atas{
+    position: fixed;
+    align-items: center;
+    background: var(--biru);
+    width: 20px;
+    bottom: 40px;
+    right: 20px;
+    font-size: 1.5em;
+    color: white;
+}
+.ke-atas i{
+    position: absolute;
+    color: rgb(50, 48, 66);
+}
+
+@media screen and (max-width:1000px){
+    nav {
+        padding: 1em;
+        align-items: center;
+    }
+    nav .container .menu-toggle{
+        display: flex;
+    }
+    nav .container ul{
+        position: absolute;
+        text-align: center;
+        background: rgb(32, 31, 31);
+        top: 53px;
+        right: 0;
+        width: 60%;
+        padding: 10px;
+        height: 80vh;
+        align-items: center;
+        justify-content: space-evenly;
+        margin-bottom: -112px;
+        flex-direction: column;
+        transition: all 1s;
+        transform: translateX(100%);
+        opacity: .8;
+        z-index: 2;
+    }
+    nav .container ul li a{
+        padding: 0 2em;
+    }
+    nav .container ul li a:hover{
+        color: rgba(49, 51, 51, 0.904);
+        background: rgb(223, 223, 233);
+    }
+    nav ul.slide{
+        transform: translateX(0);
+    }
+
+    #about .about-text-container{
+        width: 100%;
+        display: block;
+    }
+    .about-text-container .kiri{
+        margin-left: 15%;
+    }
+    #portopolo{
+        position: relative;
+    }
+    #portopolio .container-project{
+        max-width: 100%;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+    }
+    #portopolio .container-project .project{
+        width: 100%;
+    }
+    #portopolio .container-project .project{
+        width: auto;
+        text-align: justify;
+    }
+    #contact{
+        position: relative;
+    }
+    .box{
+        display: block;
+    }
+    .box .box-kiri{
+        display: contents;
+        flex-direction: column;
+        height: 300px;
+    }
+    .box .box-kiri h4{
+        padding: 5px 0 10px;
+    }
+    #contact .box .box-kanan{
+        width: auto;
+        position: relative;
+    }
+    .box .box-kiri ul{
+        flex-direction: column;
+        align-items: center;
+    }
+  
+}
